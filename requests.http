@@ -1,4 +1,28 @@
-@endpoint = https://18zd6vp9bf.execute-api.us-east-1.amazonaws.com/prod/
+@endpoint =  https://9i1oqg51z6.execute-api.us-east-1.amazonaws.com/prod
 
-GET {{endpoint}}/hello/
-##
+GET {{endpoint}}/hello
+###
+
+GET {{endpoint}}/spaces?spaceId=6720a5d1-a532-4755-8d9d-41c05e4843c4
+###
+
+GET {{endpoint}}/spaces?location=Iran
+###
+
+PUT {{endpoint}}/spaces?spaceId=e29d3ab1-c535-4d95-ad16-78cac170403a
+Content-Type: application/json
+
+{
+    "location": "Ponte de sor",
+    "name": "Best locationzzz"
+}
+###
+
+POST {{endpoint}}/spaces/
+Content-Type: application/json
+
+{
+    "location": "Iran",
+    "name": "Fuck this pile of sand!"
+}
+###

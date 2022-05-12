@@ -1,7 +1,7 @@
 import { App } from "aws-cdk-lib";
 import { SpaceStack } from "./SpaceStack";
 
-const app = new App();
-const spaceStack = new SpaceStack(app, "Space-Finder", {
-  stackName: "SpaceName",
-});
+const app = new App()
+new SpaceStack(app, 'Space-finder', {
+    stackName:'SpaceFinder'
+})

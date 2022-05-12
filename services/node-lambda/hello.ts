@@ -10,7 +10,7 @@ async function handler(event: any, context: any) {
 
   return {
     statusCode: 200,
-    bosy: "Here are ypur buckets" + JSON.stringify(buckets),
+    bosy: "Here are ypur buckets ts"+JSON.stringify(buckets),
   };
 }
 
