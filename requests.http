@@ -1,28 +1,35 @@
 @endpoint =  https://9i1oqg51z6.execute-api.us-east-1.amazonaws.com/prod
 
-GET {{endpoint}}/hello
-###
 
-GET {{endpoint}}/spaces?spaceId=6720a5d1-a532-4755-8d9d-41c05e4843c4
+# get all 
+GET {{endpoint}}/spaces
 ###
-
-GET {{endpoint}}/spaces?location=Iran
+# get by id
+GET {{endpoint}}/spaces?spaceId=48bbe3a1-753c-4d0e-9587-856bdec9a18b
 ###
-
-PUT {{endpoint}}/spaces?spaceId=e29d3ab1-c535-4d95-ad16-78cac170403a
+# get by location
+GET {{endpoint}}/spaces?location=Portugal
+###
+# update space info 
+PUT {{endpoint}}/spaces?spaceId=e74f0a2c-1819-48b1-8a6f-3aee508c16db
 Content-Type: application/json
 
 {
     "location": "Ponte de sor",
-    "name": "Best locationzzz"
+    "name": "Best City in the world"
 }
 ###
 
+# add new space
 POST {{endpoint}}/spaces/
 Content-Type: application/json
 
 {
-    "location": "Iran",
-    "name": "Fuck this pile of sand!"
+    "location": "Texas",
+    "name": "Fuck this pile of sand!",
 }
+###
+
+# delete space
+DELETE  {{endpoint}}/spaces?spaceId=e74f0a2c-1819-48b1-8a6f-3aee508c16db
 ###
